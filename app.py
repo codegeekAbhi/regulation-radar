@@ -12,6 +12,91 @@ from groq import Groq
 
 # ── PAGE CONFIG
 st.set_page_config(page_title="Regulation Radar", page_icon="📡", layout="wide")
+st.markdown("""
+<style>
+/* Main background — soft warm gray */
+.stApp {
+    background-color: #f4f5f7;
+}
+
+/* Sidebar background */
+[data-testid="stSidebar"] {
+    background-color: #eaecf0;
+}
+
+/* Metric cards — white with subtle shadow */
+[data-testid="stMetric"] {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* Metric value color */
+[data-testid="stMetricValue"] {
+    color: #1a1a2e;
+    font-weight: 700;
+}
+
+/* Metric label color */
+[data-testid="stMetricLabel"] {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+/* Primary button — deep blue accent */
+.stButton > button[kind="primary"] {
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background-color: #1e40af;
+}
+
+/* Section headers */
+h2, h3 {
+    color: #1a1a2e;
+    font-weight: 700;
+}
+
+/* App title */
+h1 {
+    color: #1d4ed8;
+    font-weight: 800;
+}
+
+/* Expander (Signal Detail cards) */
+[data-testid="stExpander"] {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    margin-bottom: 8px;
+}
+
+/* Dataframe background */
+[data-testid="stDataFrame"] {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Divider color */
+hr {
+    border-color: #e5e7eb;
+}
+
+/* Caption text */
+.stCaption {
+    color: #9ca3af;
+}
+</style>
+""", unsafe_allow_html=True)
 
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
