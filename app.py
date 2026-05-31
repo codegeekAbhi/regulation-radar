@@ -14,44 +14,70 @@ from groq import Groq
 st.set_page_config(page_title="Regulation Radar", page_icon="📡", layout="wide")
 st.markdown("""
 <style>
-/* Main background — soft warm gray */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500&display=swap');
+
+/* Fonts */
+html, body, [class*="css"] {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Main background */
 .stApp {
-    background-color: #f4f5f7;
+    background-color: #e8f0fe;
 }
 
-/* Sidebar background */
+/* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: #eaecf0;
+    background-color: #1d3a8a;
 }
 
-/* Metric cards — white with subtle shadow */
+[data-testid="stSidebar"] * {
+    color: #bdd4ff !important;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #93b8ff !important;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Metric cards */
 [data-testid="stMetric"] {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 16px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    border: 0.5px solid #c5d8f8;
 }
 
-/* Metric value color */
 [data-testid="stMetricValue"] {
-    color: #1a1a2e;
+    color: #1d3a8a;
+    font-family: 'Playfair Display', serif !important;
     font-weight: 700;
+    font-size: 2rem !important;
 }
 
-/* Metric label color */
 [data-testid="stMetricLabel"] {
-    color: #6b7280;
+    color: #5a7abf;
     font-size: 0.85rem;
+    font-family: 'DM Sans', sans-serif !important;
 }
 
-/* Primary button — deep blue accent */
+/* Primary button */
 .stButton > button[kind="primary"] {
     background-color: #1d4ed8;
     color: white;
     border: none;
     border-radius: 8px;
     padding: 10px 24px;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.95rem;
     transition: background-color 0.2s;
 }
 
@@ -59,41 +85,51 @@ st.markdown("""
     background-color: #1e40af;
 }
 
-/* Section headers */
-h2, h3 {
-    color: #1a1a2e;
+/* Title */
+h1 {
+    color: #1d3a8a !important;
+    font-family: 'Playfair Display', serif !important;
     font-weight: 700;
 }
 
-/* App title */
-h1 {
-    color: #1d4ed8;
-    font-weight: 800;
+/* Section headers */
+h2, h3 {
+    color: #1d3a8a !important;
+    font-family: 'Playfair Display', serif !important;
 }
 
-/* Expander (Signal Detail cards) */
+/* Expander cards */
 [data-testid="stExpander"] {
     background-color: #ffffff;
     border-radius: 10px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    border: 0.5px solid #c5d8f8;
     margin-bottom: 8px;
 }
 
-/* Dataframe background */
+/* Dataframe */
 [data-testid="stDataFrame"] {
     background-color: #ffffff;
     border-radius: 10px;
+    border: 0.5px solid #c5d8f8;
 }
 
-/* Divider color */
+/* Divider */
 hr {
-    border-color: #e5e7eb;
+    border-color: #c5d8f8;
 }
 
-/* Caption text */
+/* Caption */
 .stCaption {
-    color: #9ca3af;
+    color: #5a7abf;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Info box */
+.stAlert {
+    background-color: #ffffff;
+    border: 0.5px solid #c5d8f8;
+    border-radius: 10px;
+    color: #1d3a8a;
 }
 </style>
 """, unsafe_allow_html=True)
