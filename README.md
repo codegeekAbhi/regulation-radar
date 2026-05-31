@@ -56,5 +56,5 @@ GROQ_API_KEY=your-key streamlit run app.py
 
 Abhishek Singh — MBA Candidate, UC Davis (2026)  
 7+ years in B2B SaaS, marketplace, and AI-powered products  
-[LinkedIn]([https://linkedin.com/in/your-handle](https://www.linkedin.com/in/aabhishek-singh/)
+[LinkedIn] (https://www.linkedin.com/in/aabhishek-singh/)
 
