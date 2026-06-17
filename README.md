@@ -1,9 +1,9 @@
 # regulation-radar
-AI-powered regulatory risk tracker for ad-tech PMs — monitors privacy &amp; AI laws, scores product impact using LLMs
+AI-powered regulatory risk tracker for ad-tech PMs, monitors privacy &amp; AI laws, scores product impact using LLMs
 
 # 📡 Regulation Radar
 
-> A PM tool for tracking AI governance as a product constraint — not a legal checklist.
+> A PM tool for tracking AI governance as a product constraint,  not a legal checklist.
 
 ## What it does
 
@@ -54,7 +54,7 @@ GROQ_API_KEY=your-key streamlit run app.py
 
 ## Built by
 
-Abhishek Singh — MBA Candidate, UC Davis (2026)  
+Abhishek Singh — UC Davis- MBA (2026)  
 7+ years in B2B SaaS, marketplace, and AI-powered products  
-[LinkedIn] (https://www.linkedin.com/in/aabhishek-singh/)
+LinkedIn: (https://www.linkedin.com/in/aabhishek-singh/)
 
